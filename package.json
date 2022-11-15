@@ -1,5 +1,5 @@
 {
-   "name": "typescript-npm-package-template",
+   "name": "next-auth-react-query",
    "version": "0.0.0-development",
    "description": "A template for creating npm packages using TypeScript and VSCode",
    "main": "./lib/index.js",
