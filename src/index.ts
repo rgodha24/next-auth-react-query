@@ -56,7 +56,7 @@ export type UseSessionParams = Omit<
       unknown,
       Session | null | undefined,
       string[]
-   >,
+   >, 
    "queryFn"
 >;
 export default useSession;
