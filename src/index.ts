@@ -1,4 +1,4 @@
-import parseUrl from "next-auth/utils/parse-url";
+import parseUrl from "./utils/parse-url";
 import { fetchData } from "next-auth/client/_utils";
 import type { NextAuthClientConfig } from "next-auth/client/_utils";
 import type { GetSessionParams } from "next-auth/react";
@@ -47,7 +47,11 @@ const useSession = (params?: UseSessionParams) => {
          reactQueryData: { ...query },
       };
    }
-   return { status: "loading" as const, data: null, reactQueryData: { ...query } };
+   return {
+      status: "loading" as const,
+      data: null,
+      reactQueryData: { ...query },
+   };
 };
 
 export type UseSessionParams = Omit<
@@ -56,7 +60,7 @@ export type UseSessionParams = Omit<
       unknown,
       Session | null | undefined,
       string[]
-   >, 
+   >,
    "queryFn"
 >;
 export default useSession;
